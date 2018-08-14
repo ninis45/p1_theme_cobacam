@@ -1,0 +1,101 @@
+
+
+<!-- Footer -->
+<footer id="page-footer">
+    <section id="footer-top">
+        
+        <div class="container">
+            <div class="ot-breaking-news-body" data-breaking-timeout="4000" data-breaking-autostart="true">
+    						<div class="ot-breaking-news-controls">
+    							<button class="pull-right" data-break-dir="right" id="t_prev"><i class="fa fa-angle-right"></i></button>
+    							<button class="pull-right" data-break-dir="left" id="t_next"><i class="fa fa-angle-left"></i></button>
+    							<strong><i class="fa fa-twitter"></i>Síguenos</strong>
+    						</div>
+    						<div class="ot-breaking-news-content">
+    							<div class="ot-breaking-news-content-wrap block-twitter">
+                                {{ twitter:feed username="IMECMUJERES" limit="10" }}
+    								<div class="item" >
+    									{{ text }} |  {{ timespan }}
+    								</div>
+    							{{ /twitter:feed }}	
+    							</div>
+    						</div>
+    					<!-- END .ot-breaking-news-body -->
+    					</div>
+        </div><!-- /.container -->
+    </section><!-- /#footer-top -->
+
+    <section id="footer-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <aside class="logo">
+                        {{ theme:image file="logo_blanco.png" }}
+                    </aside>
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-4">
+                    <aside>
+                        <header><h4>Contáctanos</h4></header>
+                        <address>
+                            <strong>COBACAM Campeche</strong>
+                            <br/>
+                            <span>Calle Castillo Oliver No. 14, entre Lorenzo Alfaro Alomía y Avenida Miguel Alemán</span>
+                            <br/>
+                            <span>área Ah-Kim-Pech, C.P. 24014, San Francisco de Campeche, Cam. </span>
+                            <br/>
+                            <br/>
+                            <abbr title="Telephone">Teléfono:</abbr> (981) 81 100 49 y (981) 81 608 11
+                            <br/>
+                            <abbr title="Email">Email:</abbr> <a href="#">informacion@cobacam.edu.mx</a>
+                        </address>
+                    </aside>
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-4">
+                    <aside>
+                        <header><h4>Sitios de Interés</h4></header>
+                        <ul class="list-links">
+                            {{ navigation:links group="links"  }}
+                        </ul>
+                    </aside>
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-4">
+                    <aside>
+                           <header>
+                              <h2>¡Te queremos escuchar!</h2>
+                           </header>
+                           <p>
+                                Aquí tu opinión es importante, es por eso que contamos con diversos medios de comunicación para que puedas expresarte.    
+                           </p>
+                           <br />
+                           <div class="icons">
+                           
+                                <a href="https://www.facebook.com/cobacam" target="_blank"><i class="fa fa-3x fa-facebook-square"></i></a> 
+                                <a href="https://twitter.com/Cobacam_edu" target="_blank"><i class="fa fa-3x fa-twitter-square"></i></a> 
+                                <a href="https://www.youtube.com/user/cobachcampeche" target="_blank"><i class="fa fa-3x fa-youtube-square"></i></a>
+                                <a href="https://www.instagram.com/cobacam_edu" target="_blank"><i class="fa fa-3x fa-instagram"></i></a>
+                           </div>
+                          
+
+
+                    </aside>
+                </div><!-- /.col-md-3 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        <div class="background"><!--img src="assets/img/background-city.png" class="" alt=""--></div>
+    </section><!-- /#footer-content -->
+
+    <section id="footer-bottom">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="copyright">Colegio de Bachilleres del Estado de Campeche,  {{ helper:date format="Y" }}© | 
+                <ul class="secondary-navigation list-unstyled">
+                {{ navigation:links group="footer"  }}
+                </ul>
+                
+                </div><!-- /.copyright -->
+            </div><!-- /.footer-inner -->
+        </div><!-- /.container -->
+    </section><!-- /#footer-bottom -->
+
+</footer>
+<!-- end Footer -->

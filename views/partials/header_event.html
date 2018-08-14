@@ -1,0 +1,29 @@
+<div class="navigation-wrapper">
+
+	<div class="primary-navigation-wrapper">
+        <header role="banner" id="top" class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                	<div id="brand" class="navbar-brand nav">
+                        <a href="{{ url:base }}">{{ theme:image file="logo.png" }}</a>
+                    </div>
+                </div>
+                <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        {{ navigation:links group="menu_event" dropdown_class="list-unstyled child-navigation" }}
+                       
+                    </ul>
+                </nav><!-- /.navbar collapse-->
+            </div><!-- /.container -->
+        </header><!-- /.navbar -->
+    </div>
+	<div class="background">
+		<!--img alt="background" src="assets/img/background-city.png"-->
+	</div>
+</div>

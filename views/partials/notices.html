@@ -1,0 +1,21 @@
+{{ if { session:flash name="success" } }}
+    
+    <div class="alert alert-success">
+	
+    	<button data-dismiss="alert" class="close">×</button>
+        <i class="icon-warning-sign"></i>
+    	{{ session:flash name="success" }}
+    </div>
+
+{{ endif }}
+
+{{ if { session:flash name="error" } }}
+    
+    <div class="alert alert-danger">
+	
+    	<button data-dismiss="alert" class="close">×</button>
+        <i class="icon-warning-sign"></i>
+    	{{ session:flash name="error" }}
+    </div>
+
+{{ endif }}

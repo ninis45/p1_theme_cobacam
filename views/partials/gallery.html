@@ -1,0 +1,55 @@
+<!-- Our Professors, Gallery -->
+
+<div class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <header>
+                <h2>Videos</h2>
+                </header>
+                
+                <div class="section-content carousel slide" id="myCarousel">
+                                <div class="carousel-inner">
+                                {{ videos:listing }}
+                                    <div class="item{{ css }}">{{ embed }}
+                                        <div class="carousel-caption">
+                                            <p>{{ titulo }}</p>
+                                        </div>
+                                    </div>
+                                {{ /videos:listing }}
+                                </div>
+                                <!-- Carousel nav -->
+                                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                                    <i class="fa fa-angle-left"></i>
+                                </a>
+                                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <!-- Carousel nav --><!-- Carousel nav --><!-- Carousel nav --><!-- Carousel nav --><!-- Carousel nav -->
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-8">
+                <section id="gallery">
+                    <header>
+                        <h2>Galer&iacute;a de im&aacute;genes</h2>
+                    </header>
+                    
+                    <div class="section-content">
+                        <ul class="gallery-list">
+                        	{{ files:listing folder=&quot;galeria&quot; type=&quot;i&quot; fetch=&quot;subfolder|root&quot; }}
+                        	<li><a class="image-popup" href="{{ url:base }}files/large/{{ id }}"><img alt="" data-pyroimage="true" src="{{ url:site }}files/cloud_thumb/{{ id }}/150/150" /></a></li>
+                        	{{ /files:listing }}
+                        </ul>
+                        <a class="read-more" href="{{ url:base }}galeria">Toda la galer&iacute;a</a>
+                    </div>
+                    <!-- /.section-content -->
+                </section>
+                <!-- /.gallery -->
+            </div>
+            <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div>
+<!-- end Our Professors, Gallery --><!-- Partners, Make a Donation -->

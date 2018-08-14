@@ -1,0 +1,82 @@
+
+<div class="block">
+    <div class="container">
+        <div class="row">
+        
+           <div class="col-md-4 col-sm-6">
+                <section class="news-small" id="news-small">
+                    <header>
+                        <h2>Noticias</h2>
+                    </header>
+                    <div class="section-content">
+                        {{ blog:posts limit=&quot;3&quot; }}
+                        
+                        <article>
+                            <figure class="date"><i class="fa fa-file-o"></i>{{ helper:date format=&quot;d/M/Y&quot; timestamp=&quot;{{ created_on }}&quot; }}</figure>
+                            <header><a href="{{ url }}">{{ title }}</a></header>
+                        </article><!-- /article -->
+                        {{ /blog:posts }}
+                    </div><!-- /.section-content -->
+                    <a href="{{ url:base }}blog" class="read-more stick-to-bottom">Todas las noticias</a>
+                </section><!-- /.news-small -->
+            </div><!-- /.col-md-4 -->
+           
+        
+            <div class="col-md-4 col-sm-12">
+                <header>
+                <h2>Comunicados</h2>
+                </header>
+                
+                <div class="section-content list-label">
+                    <ul class="list-links">
+                        <li><span class="label label-success">Aviso</span><a href="http://www.tcjcampeche.com.mx/taller-de-ciencia-para-profes/" target="_blank">Aviso Primer Taller de Ciencia para Profes Campeche 2017</a></li>
+                       {{ files:listing folder="comunicados"  }}
+                      
+                          <li><span class="label label-success">Comunicado</span><a target="_blank" href="{{ path }}">{{ description }}</a></li>
+                       {{ /files:listing }}
+                	   {{ avisos:listing }}
+                       
+                	    <li><span class="label {{ if class }}{{ class }}{{ else }}label-primary{{ endif }}">{{ tipo }}</span><br /> <a {{ if tipo=="aviso" }} data-toggle="modal" {{ endif }} data-target="#myModal"  href="{{ url }}" > {{ titulo }} </a> </li>
+                       
+                	   {{ /avisos:listing }}
+                       
+                    </ul>
+                </div>
+                <a href="{{url:base}}avisos-de-privacidad" class="universal-button framed framed-success">
+                                    <h3><strong>AVISOS DE PRIVACIDAD DEL COBACAM</strong></h3>
+                                    <figure class="date"><i class="fa fa-arrow-right"></i></figure>
+                </a>
+            </div>
+            <!-- /.col-md-4 -->
+            
+            <div class="col-md-4 col-sm-6">
+                <header>
+                <h2>Videos</h2>
+                </header>
+                
+                <div class="section-content carousel slide" id="myCarousel">
+                                <div class="carousel-inner">
+                                {{ youtube:feed }}
+                                    <div class="item{{ css }}">{{ embed }}
+                                        <div class="carousel-caption">
+                                            <p>{{ titulo }}</p>
+                                        </div>
+                                    </div>
+                                {{ /youtube:feed }}
+                                </div>
+                                <!-- Carousel nav -->
+                                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                                    <i class="fa fa-angle-left"></i>
+                                </a>
+                                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <!-- Carousel nav --><!-- Carousel nav --><!-- Carousel nav --><!-- Carousel nav --><!-- Carousel nav -->
+                </div>
+            </div>
+            <!-- /.col-md-4 -->
+        </div>
+    <!-- /.row -->
+    </div>
+<!-- /.container -->
+</div>

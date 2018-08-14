@@ -1,0 +1,178 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  color: #252525;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 12px;
+  height: 100%;
+  overflow-x: hidden;
+  background: #762d89;
+  color:#fff;
+}
+.course-image img{
+    width: 100%;
+}
+
+input[type="text"], input[type="email"], input[type="search"], input[type="password"], input[type="number"], textarea {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: whitesmoke;
+  border: 2px solid #c5c5c5;
+  font-size: 12px;
+  min-height: 40px;
+  padding: 10px 9px 9px 9px;
+  width: 100%;
+}
+input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover, input[type="password"]:hover, input[type="number"]:hover, textarea:hover {
+  border: 2px solid #a6a6a6;
+}
+input[type="text"]:focus, input[type="text"]:active, input[type="email"]:focus, input[type="email"]:active, input[type="search"]:focus, input[type="search"]:active, input[type="password"]:focus, input[type="password"]:active, input[type="number"]:focus, input[type="number"]:active, textarea:focus, textarea:active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #a6a6a6;
+  background-color: #fff;
+}
+input[type="text"].has-dark-background, input[type="email"].has-dark-background, input[type="search"].has-dark-background, input[type="password"].has-dark-background, input[type="number"].has-dark-background, textarea.has-dark-background {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+}
+input[type="text"].has-dark-background:hover, input[type="email"].has-dark-background:hover, input[type="search"].has-dark-background:hover, input[type="password"].has-dark-background:hover, input[type="number"].has-dark-background:hover, textarea.has-dark-background:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+input[type="text"].has-dark-background:focus, input[type="text"].has-dark-background:active, input[type="email"].has-dark-background:focus, input[type="email"].has-dark-background:active, input[type="search"].has-dark-background:focus, input[type="search"].has-dark-background:active, input[type="password"].has-dark-background:focus, input[type="password"].has-dark-background:active, input[type="number"].has-dark-background:focus, input[type="number"].has-dark-background:active, textarea.has-dark-background:focus, textarea.has-dark-background:active {
+  background-color: #fff;
+  color: #252525;
+}
+
+input {
+  outline: none !important;
+}
+
+.input-group {
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+}
+.selectize-control {
+  height: 40px;
+}
+
+.selectize-control .selectize-input {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: inherit;
+  background-color: whitesmoke;
+  border: 2px solid #c5c5c5;
+  height: 40px;
+  padding: 9px;
+}
+.selectize-control .selectize-input:after {
+  cursor: pointer;
+}
+.selectize-control .selectize-input.full {
+  background-color: whitesmoke;
+}
+.selectize-control .selectize-dropdown {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: whitesmoke;
+  border-color: #c5c5c5;
+  border-width: 2px;
+  margin: -2px 0px 0px;
+  width: 100% !important;
+}
+.selectize-control .selectize-input.focus {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.selectize-control .selectize-input.dropdown-active {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+.selectize-control .selectize-input input {
+  font-size: 12px !important;
+}
+.selectize-control .selectize-dropdown [data-selectable] {
+  padding: 8px;
+}
+.selectize-control .selectize-dropdown {
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.selectize-control .selectize-dropdown .active {
+  color: #252525;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.selectize-control.has-dark-background .selectize-input {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: inherit;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0);
+  height: 40px;
+  padding: 9px;
+}
+.selectize-control.has-dark-background .selectize-input:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.selectize-control.has-dark-background .selectize-input.full {
+  color: #fff;
+}
+.selectize-control.has-dark-background .selectize-input.full.focus {
+  background-color: #fff;
+  color: #252525;
+}
+.selectize-control.has-dark-background .selectize-input.full.focus.input-active {
+  color: #252525;
+}
+.selectize-control.has-dark-background .selectize-input.not-full input {
+  color: #fff;
+}
+.selectize-control.has-dark-background .selectize-input.not-full.focus.input-active {
+  color: #252525;
+  background-color: #fff;
+}
+.selectize-control.has-dark-background .selectize-input.not-full.focus.input-active input {
+  color: #252525;
+}
+.selectize-control.has-dark-background .selectize-dropdown {
+  background-color: #fff;
+  border-color: whitesmoke;
+  border-width: 2px;
+  font-size: 12px !important;
+  margin: -2px 0px 0px;
+  width: 100% !important;
+}
+.selectize-control.has-dark-background .selectize-dropdown .selectize-dropdown-content .option {
+  color: #252525;
+}

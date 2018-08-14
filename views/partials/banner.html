@@ -1,0 +1,49 @@
+<!-- Homepage Slider -->
+<style type="text/css">
+  /*.fa-chevron-left,
+  .fa-chevron-right
+{
+     position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -10px!important;
+}*/
+</style>
+<section id="homepage-slider">
+
+    <div id="slider" class="carousel slide carousel-banner" data-ride="carousel">
+            <div id="carousel-inner" class="carousel-inner">
+         	    {{ banner:listing limit="10" }}
+                <div class="item{{if helper:count==1}} active{{endif}}">	
+                    
+                    	<img src="{{ url:site }}files/cloud_thumb/{{ portada }}/2438/775" />
+                    
+                 	<div class="carousel-caption">
+                        <h3>{{titulo}}</h3>
+                        
+                       
+                        {{ if  url_path != ""  }}
+                                    <a href="{{ url_path }}" class="btn btn-framed-white" target="{{ target_link }}">Más información</a>
+                        {{ endif }}
+                    </div>
+                </div>
+                {{ /banner:listing }}
+    	    </div>
+          <!-- Controls -->
+    	  <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+    	     <span class="fa fa-chevron-left" aria-hidden="true"></span>
+    	     <span class="sr-only">Anterior</span>
+    	  </a>
+    	  <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+    	     <span class="fa fa-chevron-right" aria-hidden="true"></span>
+    	     <span class="sr-only">Siguiente</span>
+    	  </a>
+    </div>
+
+
+</section>
+
+
+<!-- end Homepage Slider -->
+

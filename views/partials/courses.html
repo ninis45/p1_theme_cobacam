@@ -1,0 +1,34 @@
+ <section id="latest-courses" >
+        <div class="block">
+            <div class="container">
+                <div class="block-dark-background">
+                    <header><h2>Cursos</h2></header>
+                    <div class="row">
+                        {{ cursos:items limit="6" }}
+                        <div class="col-md-4">
+                            <div class="latest-course">
+                                <figure class="image">
+                                    <div class="image-wrapper"><a href="{{ url_link }}">{{ if portada_curso != '' }}<img src="{{ url:base }}files/cloud_thumb/{{ portada_curso }}"/>{{ else }} {{  theme:image file="logo_mini.jpg" }} {{ endif }}</a></div>
+                                </figure>
+                                <aside class="description">
+                                    <a href="{{ url_link }}"><h4>{{ titulo }}</h4></a>
+                                    <!--<a href="#" class="course-category">Science</a>-->
+                                    <p>{{ resumen }}</p>
+                                    <div class="course-meta">
+                                        <span class="course-date"><i class="fa fa-calendar-o"></i>{{ helper:format_date_calendar date="{{ fecha_ini }}" typo="short" }}</span>
+                                        <span class="course-length"><i class="fa fa-clock-o"></i>{{  duracion }}</span>
+                                    </div>
+                                </aside>
+                                <hr>
+                            </div><!-- /.latest-course -->
+                        </div><!-- /.col-md-4 -->
+                        {{ /cursos:items }}
+                        
+                        
+                    </div><!-- /.row -->
+                </div>
+               
+            </div><!-- /.container -->
+        </div><!-- /.block -->
+    </section>
+    <!-- /#latest-courses -->

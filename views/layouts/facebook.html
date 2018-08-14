@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="COBACAM Campeche"/>
+    <meta name="language" content="{{ lang:code }}" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <!-- Begin scripts -->
+    {{ asset:js file="jquery-2.1.0.min.js" }}
+    {{ asset:js file="jquery-migrate-1.2.1.min.js" }}
+    {{ asset:js file="bootstrap/bootstrap.min.js" }}
+    {{ asset:js file="selectize.min.js" }}
+    
+    
+    {{ asset:css file="bootstrap.css" }}
+    {{ asset:css file="selectize.css" }}
+    {{ asset:css file="app.css" }}
+    {{ asset:render }}
+    
+    {{ template:metadata }}
+    
+    <script type="text/javascript">
+    
+        $(document).ready(function(){
+              $('select').removeClass('form-control');
+            $('select').selectize();
+            
+        });
+    </script>
+    
+</head>
+<body>
+   
+            
+                {{ template:body }}
+            
+               
+            
+        
+    
+
+</body>
+</html>

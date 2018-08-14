@@ -1,0 +1,46 @@
+<div class="block" id="resources">
+     <div class="container">
+         <div class="row">
+         
+             <div class="col-md-6" >
+                
+                        <header><h2>Convocatorias</h2></header>
+                        
+                <div class="resource-list">
+                        <ul class="element-framed">
+                            {{ navigation:links group="convocatorias"  }}
+                            
+                            <li> {{helper:count}}<a target="{{ target }}" class="{{ class }}" href="{{ url }}">{{ title }}</a></li>
+                            {{ /navigation:links }}
+                        </ul>
+                </div>
+             </div>
+             <div class="col-md-6">
+                
+                    <header><h2>Recursos educativos</h2></header>
+                <div class="resource-list">
+                    <ul class="element-framed">
+                         {{ navigation:links group="recursos"  }}
+                    </ul>
+                </div>
+                   
+             </div>
+        </div>
+     </div>
+</div><!-- end block-->
+
+<div class="block">
+     <div class="container">
+         <div class="row">
+             <div class="col-md-12 ">
+                        <header><h2>Programas</h2></header>
+                        <ul class="gallery-list">
+                        	{{ files:listing folder="programas" type="i" fetch=&quot;subfolder|root&quot; }}
+                        	<li><a class="{{ alt_attribute }}" target="{{ if description != ''}}_blank{{ endif }}" href="{{ if description != ''}}{{ description }} {{ else }} {{ url:base }}files/large/{{ id }} {{ endif }}"><img alt="" data-pyroimage="true" src="{{ url:site }}files/cloud_thumb/{{ id }}/150/150" /></a></li>
+                        	{{ /files:listing }}
+                        </ul>
+                        
+             </div>
+         </div>
+     </div>
+</div>

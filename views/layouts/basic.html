@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?file=api&v=3&&key=AIzaSyAHXd_wbPYIVTEtQRhFNZWp6t45UVhLncs"></script>
+    {{ theme:partial name="metadata" }}
+
+</head>
+<body class="{{ if page:is_home == FALSE }}page-sub-page{{ else }}page-sub-page{{ endif }}">
+    {{ integration:analytics }}
+    <!-- Wrapper -->
+    <div class="wrapper">  
+
+		<div class="navigation-wrapper">
+           <div class="secondary-navigation-wrapper">
+                <div class="container">
+                    <div class="navigation-contact pull-left"><span class="opacity-70">Colegio de Bachilleres del Estado de Campeche</span></div>
+                    
+                    
+                </div>
+            </div><!-- /.secondary-navigation -->
+             <div class="background">
+        
+                {{ theme:image file="background-city.png" }}
+            </div>
+        </div>
+        <!-- Page Content -->
+        <div id="page-content">
+            
+                {{ template:body }}
+            
+               
+            
+        </div>
+        <!-- end Page Content -->
+        <!-- Footer -->
+<footer id="page-footer">
+    
+
+        
+    
+        <section id="footer-bottom">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="copyright">Colegio de Bachilleres del Estado de Campeche,  {{ helper:date format="Y" }}© | 
+                    <ul class="secondary-navigation list-unstyled">
+                    {{ navigation:links group="footer"  }}
+                    </ul>
+                    
+                    </div><!-- /.copyright -->
+                </div><!-- /.footer-inner -->
+            </div><!-- /.container -->
+        </section><!-- /#footer-bottom -->
+    
+    </footer>
+<!-- end Footer -->
+    </div>
+    <!-- End Wrapper-->
+    <div class="modal fade" id="myModal" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          
+          
+          
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

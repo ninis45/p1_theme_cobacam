@@ -1,0 +1,14 @@
+{{ if template:has_breadcrumbs }}
+    {{ if theme:options:show_breadcrumbs == 'yes' }}
+        <ol class="breadcrumb">
+         <li><a href="{{ url:base }}"><i class="fa fa-home"></i> Inicio</a></li>
+         {{ template:breadcrumbs }}
+             {{ if uri }}
+				<li>{{ url:anchor segments=uri title=name }}</li>
+			{{ else }}
+				<li class="active">{{ name }}</li>
+			{{ endif }}
+         {{ /template:breadcrumbs }}
+        </ol>
+    {{ endif }}
+{{ endif }}

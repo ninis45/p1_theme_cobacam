@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     {{ theme:partial name="metadata" }}
+
+</head>
+<body class="page-homepage-courses">
+    {{ integration:analytics }}
+    <!-- Wrapper -->
+    <div class="wrapper">  
+
+		{{ theme:partial name="header_event" }}
+        {{ if page:is_home == FALSE }}
+            <div class="container">{{ theme:partial name="breadcrumbs" }}</div>
+        {{ endif }}
+        <!-- Page Content -->
+        <div id="page-content">
+                
+                {{ template:body }}
+            
+               
+            
+        </div>
+        <!-- end Page Content -->
+        {{ theme:partial name="event/footer" }}
+    </div>
+    <!-- End Wrapper-->
+    <div class="modal fade" id="myModal" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          
+          
+          
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

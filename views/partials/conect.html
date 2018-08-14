@@ -1,0 +1,29 @@
+
+
+<div class="block">
+    <div class="container">
+                    <div class="ot-breaking-news-body" data-breaking-timeout="4000" data-breaking-autostart="true">
+						<div class="ot-breaking-news-controls">
+							<button class="pull-right" data-break-dir="right" id="t_prev"><i class="fa fa-angle-right"></i></button>
+							<button class="pull-right" data-break-dir="left" id="t_next"><i class="fa fa-angle-left"></i></button>
+							<strong><i class="fa fa-twitter"></i>Síguenos</strong>
+						</div>
+						<div class="ot-breaking-news-content">
+							<div class="ot-breaking-news-content-wrap block-twitter">
+                            {{ twitter:feed username="IMECMUJERES" limit="10" }}
+								<div class="item" >
+									{{ text }} |  {{ timespan }}
+								</div>
+							{{ /twitter:feed }}	
+							</div>
+						</div>
+					<!-- END .ot-breaking-news-body -->
+					</div>
+        
+    </div>
+    
+
+</div>
+
+
+

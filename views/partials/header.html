@@ -1,0 +1,60 @@
+<!-- Header -->
+<div class="navigation-wrapper">
+   <div class="secondary-navigation-wrapper">
+        <div class="container">
+            <div class="navigation-contact pull-left"><span class="opacity-70">Colegio de Bachilleres del Estado de Campeche</span></div>
+            
+            <div class="search">
+                <form id="" action="{{ url:base }}resultados" method="get">
+                    <div class="input-group">
+                        <input type="search" class="form-control" name="q" placeholder="Buscar"/>
+                        <span class="input-group-btn"><button type="submit" id="search-submit" class="btn"><i class="fa fa-search"></i></button></span>
+                    </div><!-- /.input-group -->
+                </form>
+            </div>
+            
+            <ul class="secondary-navigation list-unstyled">
+            	<li><a href="{{ url:site }}transparencia" ><i class="fa fa-search-plus"></i> Transparencia</a></li>
+                <li><a href="{{ url:site }}files/download/de4e24cdc9d0bde" target="_blank"><i class="fa fa-calendar"></i> Calendario escolar</a></li>
+                <li> <a href="{{ url:base }}acceso"><i class="fa fa-lock"></i> Acceso</a></li>
+                {{ if user:logged_in }}
+               
+                <li><a  href="{{ url:base }}edit-profile" aria-expanded="false"><i class="fa fa-user"></i>{{ user:display_name }}</a></li>
+                
+               
+                <li>|</li>
+                <li><a href="{{ url:site }}users/logout">{{ helper:lang line="logout_label" }}</a></li>
+                {{ endif }}
+            </ul>
+        </div>
+    </div><!-- /.secondary-navigation -->
+    <div class="primary-navigation-wrapper">
+        <header class="navbar" id="top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                	<div class="navbar-brand nav" id="brand">
+                        <a href="{{ url:base }}">{{ theme:image file="logo.png" }}</a>
+                        
+                    </div>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+                    <ul class="nav navbar-nav">
+                        {{ navigation:links group="header" dropdown_class="list-unstyled child-navigation" }}
+                       
+                    </ul>
+                </nav><!-- /.navbar collapse-->
+            </div><!-- /.container -->
+        </header><!-- /.navbar -->
+    </div><!-- /.primary-navigation -->
+    <div class="background">
+        
+        {{ theme:image file="background-city.png" }}
+    </div>
+</div>
+<!-- End Header-->
