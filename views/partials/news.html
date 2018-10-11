@@ -10,7 +10,6 @@
                     </header>
                     <div class="section-content">
                         {{ blog:posts limit=&quot;3&quot; }}
-                        
                         <article>
                             <figure class="date"><i class="fa fa-file-o"></i>{{ helper:date format=&quot;d/M/Y&quot; timestamp=&quot;{{ created_on }}&quot; }}</figure>
                             <header><a href="{{ url }}">{{ title }}</a></header>
@@ -31,11 +30,9 @@
                     <ul class="list-links">
                         <li><span class="label label-success">Aviso</span><a href="http://www.tcjcampeche.com.mx/taller-de-ciencia-para-profes/" target="_blank">Aviso Primer Taller de Ciencia para Profes Campeche 2017</a></li>
                        {{ files:listing folder="comunicados"  }}
-                      
                           <li><span class="label label-success">Comunicado</span><a target="_blank" href="{{ path }}">{{ description }}</a></li>
                        {{ /files:listing }}
                 	   {{ avisos:listing }}
-                       
                 	    <li><span class="label {{ if class }}{{ class }}{{ else }}label-primary{{ endif }}">{{ tipo }}</span><br /> <a {{ if tipo=="aviso" }} data-toggle="modal" {{ endif }} data-target="#myModal"  href="{{ url }}" > {{ titulo }} </a> </li>
                        
                 	   {{ /avisos:listing }}

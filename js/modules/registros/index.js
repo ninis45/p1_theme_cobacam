@@ -33,7 +33,7 @@ $(document).ready(function(){
     },*/
     {
       name: 'alumnos',
-      display: 'nombre',
+       display: 'nombre',
       source: alumnos,
       templates: {
           empty: [

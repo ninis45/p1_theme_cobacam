@@ -15,7 +15,6 @@ $(document).ready(function($) {
     {
         $.fancybox('#modal-fancybox');
     }
-    
     if($('.text-upper').length > 0)
     {
           
@@ -28,12 +27,7 @@ $(document).ready(function($) {
                element.val(value.toUpperCase());
           });
     }
-    $('.formato-moneda').on('blur',function(){
-        
-        
-    });
-    
-    
+   
     //$.fancybox('#modal-fancybox');
     /*$.fancybox({
             'width': '40%',
@@ -425,15 +419,15 @@ $(document).ready(function($) {
 });
     //  Count Down - Course Detail
 
-/*if (typeof _date != 'undefined') { 
+if (typeof _date != 'undefined') { // run function only if _date is defined
     var Countdown = new Countdown({
         dateEnd: new Date(_date),
         msgAfter: _messageAfterCount,
         onEnd: function() {
-            disableJoin(); 
+            disableJoin(); // Run this function after count down is over
         }
     });
-}*/
+}
 
 
 // Remove button function for "join to course" button after count down is over
@@ -444,12 +438,12 @@ function disableJoin() {
     // Find "join to course" button on bottom of course detail
     var buttonToBeRemovedBottom = document.getElementById("btn-course-join-bottom");
     // Remove button
-   // buttonToBeRemoved.remove();
+    buttonToBeRemoved.remove();
     // Remove button on the bottom
-   // buttonToBeRemovedBottom.remove();
+    buttonToBeRemovedBottom.remove();
     // Give the ".course-count-down" element new class to hide date
-    //document.getElementById("course-count-down").className += " disable-join";
-    //document.getElementById("course-start").className += " disable-join";
+    document.getElementById("course-count-down").className += " disable-join";
+    document.getElementById("course-start").className += " disable-join";
 }
 
 function formato_moneda(text)
