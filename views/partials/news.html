@@ -28,14 +28,14 @@
                 
                 <div class="section-content list-label">
                     <ul class="list-links">
-                        <li><span class="label label-success">Aviso</span><a href="http://www.tcjcampeche.com.mx/taller-de-ciencia-para-profes/" target="_blank">Aviso Primer Taller de Ciencia para Profes Campeche 2017</a></li>
-                       {{ files:listing folder="comunicados"  }}
-                          <li><span class="label label-success">Comunicado</span><a target="_blank" href="{{ path }}">{{ description }}</a></li>
-                       {{ /files:listing }}
-                	   {{ avisos:listing }}
+                        {{ avisos:listing }}
                 	    <li><span class="label {{ if class }}{{ class }}{{ else }}label-primary{{ endif }}">{{ tipo }}</span><br /> <a {{ if tipo=="aviso" }} data-toggle="modal" {{ endif }} data-target="#myModal"  href="{{ url }}" > {{ titulo }} </a> </li>
                        
                 	   {{ /avisos:listing }}
+                       {{ files:listing folder="comunicados"  }}
+                          <li><span class="label label-success">Comunicado</span><a target="_blank" href="{{ path }}">{{ description }}</a></li>
+                       {{ /files:listing }}
+                	   
                        
                     </ul>
                 </div>
